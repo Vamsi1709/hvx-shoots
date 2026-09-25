@@ -2,23 +2,15 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
-
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>HVX Shoots | Photography & Cinematography</title>
 
   <meta name="description"
         content="HVX Shoots - Photography and Cinematography for Weddings, Events, Reels and Portraits.">
 
-
   <style>
-
-    /* =========================
-       RESET
-    ========================= */
 
     * {
       margin: 0;
@@ -26,11 +18,9 @@
       box-sizing: border-box;
     }
 
-
     html {
       scroll-behavior: smooth;
     }
-
 
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -38,371 +28,219 @@
       color: white;
     }
 
-
-    /* =========================
-       NAVIGATION
-    ========================= */
+    /* ================= NAVBAR ================= */
 
     nav {
-
       position: fixed;
-
       top: 0;
       left: 0;
-
       width: 100%;
 
       padding: 18px 6%;
 
       display: flex;
-
       justify-content: space-between;
-
       align-items: center;
 
       background: rgba(0, 0, 0, 0.88);
-
       backdrop-filter: blur(10px);
 
       z-index: 1000;
 
       border-bottom: 1px solid #222;
-
     }
-
 
     .logo {
-
       font-size: 30px;
-
       font-weight: 900;
-
       letter-spacing: 5px;
-
     }
-
 
     .logo span {
-
       display: block;
-
       font-size: 10px;
-
       letter-spacing: 7px;
-
       text-align: center;
-
     }
-
 
     .nav-links {
-
       display: flex;
-
       gap: 25px;
-
       list-style: none;
-
     }
-
 
     .nav-links a {
-
       color: white;
-
       text-decoration: none;
-
       font-size: 14px;
-
       transition: 0.3s;
-
     }
-
 
     .nav-links a:hover {
-
       color: #dcae55;
-
     }
-
 
     .book-nav {
-
       padding: 12px 22px;
-
       border: 1px solid #dcae55;
-
       color: #dcae55;
-
       text-decoration: none;
-
       border-radius: 5px;
-
     }
 
-
-    /* =========================
-       HERO
-    ========================= */
+    /* ================= HERO ================= */
 
     .hero {
-
       min-height: 100vh;
 
       padding: 150px 7% 70px;
 
       display: flex;
-
       align-items: center;
 
       background:
-
         linear-gradient(
           90deg,
           #050505 20%,
           rgba(0,0,0,0.65),
           rgba(0,0,0,0.15)
         ),
-
         url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=85")
-
-        center / cover;
-
+        center/cover;
     }
-
 
     .hero-content {
-
       max-width: 650px;
-
     }
-
 
     .small-title {
-
       color: #dcae55;
-
       letter-spacing: 6px;
-
       font-size: 13px;
-
       margin-bottom: 20px;
-
     }
-
 
     .hero h1 {
-
-      font-size:
-        clamp(60px, 9vw, 120px);
-
+      font-size: clamp(60px, 9vw, 120px);
       letter-spacing: 8px;
-
       line-height: 0.9;
-
       font-weight: 900;
-
     }
-
 
     .shoots {
-
       letter-spacing: 16px;
-
-      font-size:
-        clamp(18px, 3vw, 30px);
-
+      font-size: clamp(18px, 3vw, 30px);
       margin-top: 15px;
-
     }
-
 
     .tagline {
-
       margin-top: 25px;
-
       font-size: 25px;
-
       color: #e2b65e;
-
       font-family: Georgia, serif;
-
       font-style: italic;
-
     }
-
 
     .categories {
-
       margin-top: 20px;
-
       letter-spacing: 2px;
-
       font-size: 14px;
-
     }
-
 
     .buttons {
-
       margin-top: 35px;
-
       display: flex;
-
       gap: 15px;
-
       flex-wrap: wrap;
-
     }
-
 
     .btn {
-
       padding: 16px 28px;
-
       text-decoration: none;
-
       font-weight: bold;
-
       border-radius: 5px;
-
       display: inline-block;
-
+      transition: 0.3s;
     }
 
+    .btn:hover {
+      transform: translateY(-2px);
+    }
 
     .primary {
-
       background: #e3b55d;
-
       color: #111;
-
     }
-
 
     .secondary {
-
       border: 1px solid #e3b55d;
-
       color: white;
-
     }
 
-
-    /* =========================
-       COMMON SECTIONS
-    ========================= */
+    /* ================= COMMON ================= */
 
     section {
-
       padding: 80px 7%;
-
     }
-
 
     .section-title {
-
       color: #dcae55;
-
       letter-spacing: 5px;
-
       font-size: 12px;
-
       margin-bottom: 12px;
-
     }
-
 
     section h2 {
-
       font-size: 42px;
-
       margin-bottom: 35px;
-
     }
 
-
-    /* =========================
-       SERVICES
-    ========================= */
+    /* ================= SERVICES ================= */
 
     .services {
-
       display: grid;
-
-      grid-template-columns:
-        repeat(4, 1fr);
-
+      grid-template-columns: repeat(4, 1fr);
       gap: 18px;
-
     }
-
 
     .service {
-
       background: #151515;
-
       border: 1px solid #292929;
-
       padding: 25px;
-
       border-radius: 8px;
-
       transition: 0.3s;
-
     }
-
 
     .service:hover {
-
       transform: translateY(-5px);
-
       border-color: #dcae55;
-
     }
-
 
     .service h3 {
-
       margin-bottom: 10px;
-
     }
-
 
     .service p {
-
       color: #aaa;
-
       line-height: 1.6;
-
     }
 
-
-    /* =========================
-       OUR MEMORIES
-    ========================= */
+    /* ================= OUR MEMORIES ================= */
 
     .memories {
-
       background: #0d0d0d;
-
     }
-
 
     .memory-grid {
-
       display: grid;
 
-      grid-template-columns:
-        repeat(4, 1fr);
+      /* EXACTLY 4 COLUMNS */
+      grid-template-columns: repeat(4, 1fr);
 
       gap: 15px;
-
     }
 
-
     .memory-card {
-
       height: 300px;
 
       overflow: hidden;
@@ -412,14 +250,10 @@
       background: #151515;
 
       border: 1px solid #292929;
-
     }
 
-
     .memory-card img {
-
       width: 100%;
-
       height: 100%;
 
       object-fit: cover;
@@ -429,21 +263,15 @@
       opacity: 1;
 
       transition:
-        opacity 0.6s ease,
+        opacity 0.7s ease,
         transform 0.5s ease;
-
     }
-
 
     .memory-card:hover img {
-
       transform: scale(1.06);
-
     }
 
-
     .memory-caption {
-
       text-align: center;
 
       color: #999;
@@ -451,16 +279,11 @@
       margin-top: 25px;
 
       line-height: 1.6;
-
     }
 
-
-    /* =========================
-       INSTAGRAM
-    ========================= */
+    /* ================= INSTAGRAM ================= */
 
     .insta-box {
-
       padding: 35px;
 
       border: 1px solid #292929;
@@ -470,53 +293,34 @@
       text-align: center;
 
       background: #111;
-
     }
-
 
     .insta-box h3 {
-
       font-size: 28px;
-
       margin-bottom: 12px;
-
     }
-
 
     .insta-box p {
-
       color: #aaa;
-
       margin-bottom: 25px;
-
       line-height: 1.6;
-
     }
 
-
-    /* =========================
-       BOOKING
-    ========================= */
+    /* ================= BOOKING ================= */
 
     .booking {
-
       background:
-
         linear-gradient(
           135deg,
           #111,
           #181818
         );
-
     }
 
-
     .booking-intro {
-
       max-width: 700px;
 
-      margin:
-        -15px auto 30px;
+      margin: -15px auto 30px;
 
       text-align: center;
 
@@ -525,12 +329,9 @@
       line-height: 1.8;
 
       font-size: 18px;
-
     }
 
-
     .booking-form {
-
       max-width: 650px;
 
       margin: auto;
@@ -538,14 +339,11 @@
       display: grid;
 
       gap: 15px;
-
     }
-
 
     .booking-form input,
     .booking-form select,
     .booking-form textarea {
-
       width: 100%;
 
       padding: 16px;
@@ -559,47 +357,29 @@
       border-radius: 5px;
 
       font: inherit;
-
     }
-
 
     .booking-form input:focus,
     .booking-form select:focus,
     .booking-form textarea:focus {
-
       outline: none;
-
       border-color: #dcae55;
-
     }
-
 
     .booking-form textarea {
-
       height: 130px;
-
       resize: none;
-
     }
-
 
     .submit {
-
       border: none;
-
       cursor: pointer;
-
       font-size: 16px;
-
     }
 
-
-    /* =========================
-       THANK YOU
-    ========================= */
+    /* ================= THANK YOU ================= */
 
     .thank-you {
-
       display: none;
 
       max-width: 650px;
@@ -615,69 +395,46 @@
       border: 1px solid #dcae55;
 
       border-radius: 10px;
-
     }
 
-
     .thank-you h3 {
-
       color: #e3b55d;
 
       font-size: 28px;
 
       margin-bottom: 15px;
-
     }
 
-
     .thank-you p {
-
       color: #ddd;
 
       line-height: 1.7;
 
       margin-bottom: 20px;
-
     }
 
-
     .whatsapp-note {
-
       color: #aaa;
 
       font-size: 14px;
 
       margin-top: 15px;
-
     }
 
-
-    /* =========================
-       CONTACT
-    ========================= */
+    /* ================= CONTACT ================= */
 
     #contact p {
-
       color: #ccc;
-
     }
-
 
     .contact-link {
-
       color: #e3b55d;
-
       text-decoration: none;
-
     }
 
-
-    /* =========================
-       FOOTER
-    ========================= */
+    /* ================= FOOTER ================= */
 
     footer {
-
       text-align: center;
 
       padding: 35px;
@@ -685,146 +442,84 @@
       background: #050505;
 
       color: #888;
-
     }
 
-
-    /* =========================
-       TABLET
-    ========================= */
+    /* ================= TABLET ================= */
 
     @media (max-width: 900px) {
 
       .nav-links {
-
         gap: 15px;
-
       }
-
 
       .services {
-
-        grid-template-columns:
-          repeat(2, 1fr);
-
+        grid-template-columns: repeat(2, 1fr);
       }
-
 
       .memory-grid {
-
-        grid-template-columns:
-          repeat(2, 1fr);
-
+        grid-template-columns: repeat(2, 1fr);
       }
-
 
       .memory-card {
-
         height: 280px;
-
       }
-
     }
 
-
-    /* =========================
-       MOBILE
-    ========================= */
+    /* ================= MOBILE ================= */
 
     @media (max-width: 650px) {
 
       nav {
-
         padding: 15px 5%;
-
       }
-
 
       .nav-links {
-
         display: none;
-
       }
-
 
       .hero {
-
-        padding:
-          130px 6% 60px;
-
+        padding: 130px 6% 60px;
       }
-
 
       .hero h1 {
-
         font-size: 65px;
-
       }
-
 
       section {
-
-        padding:
-          60px 5%;
-
+        padding: 60px 5%;
       }
-
 
       section h2 {
-
         font-size: 32px;
-
       }
-
 
       .services {
-
         grid-template-columns: 1fr;
-
       }
-
 
       .memory-grid {
-
-        grid-template-columns:
-          repeat(2, 1fr);
-
+        grid-template-columns: repeat(2, 1fr);
         gap: 8px;
-
       }
-
 
       .memory-card {
-
         height: 200px;
-
       }
-
 
       .booking-intro {
-
         font-size: 16px;
-
       }
-
     }
-
 
     @media (max-width: 400px) {
 
       .memory-grid {
-
         grid-template-columns: 1fr;
-
       }
-
 
       .memory-card {
-
         height: 280px;
-
       }
-
     }
 
   </style>
@@ -835,199 +530,117 @@
 <body>
 
 
-  <!-- =========================
-       NAVIGATION
-  ========================= -->
+  <!-- ================= NAVIGATION ================= -->
 
   <nav>
 
     <div class="logo">
-
       HVX
-
-      <span>
-        SHOOTS
-      </span>
-
+      <span>SHOOTS</span>
     </div>
 
 
     <ul class="nav-links">
 
       <li>
-        <a href="#home">
-          Home
-        </a>
+        <a href="#home">Home</a>
       </li>
 
-
       <li>
-        <a href="#services">
-          Services
-        </a>
+        <a href="#services">Services</a>
       </li>
 
-
       <li>
-        <a href="#memories">
-          Our Memories
-        </a>
+        <a href="#memories">Our Memories</a>
       </li>
 
-
       <li>
-        <a href="#instagram">
-          Instagram
-        </a>
+        <a href="#instagram">Instagram</a>
       </li>
 
-
       <li>
-        <a href="#booking">
-          Booking
-        </a>
+        <a href="#booking">Booking</a>
       </li>
 
-
       <li>
-        <a href="#contact">
-          Contact
-        </a>
+        <a href="#contact">Contact</a>
       </li>
 
     </ul>
 
 
-    <a
-      href="#booking"
-      class="book-nav">
-
+    <a href="#booking" class="book-nav">
       Book Your Slot
-
     </a>
 
   </nav>
 
 
+  <!-- ================= HERO ================= -->
 
-  <!-- =========================
-       HERO
-  ========================= -->
-
-  <section
-    class="hero"
-    id="home">
-
+  <section class="hero" id="home">
 
     <div class="hero-content">
 
-
       <div class="small-title">
-
-        PHOTOGRAPHY &
-        CINEMATOGRAPHY
-
+        PHOTOGRAPHY & CINEMATOGRAPHY
       </div>
 
-
-      <h1>
-
-        HVX
-
-      </h1>
-
+      <h1>HVX</h1>
 
       <div class="shoots">
-
         SHOOTS
-
       </div>
-
 
       <div class="tagline">
-
         Your moments. Our frames.
-
       </div>
-
 
       <div class="categories">
-
         WEDDINGS • EVENTS • REELS • PORTRAITS
-
       </div>
-
 
       <div class="buttons">
 
-
-        <a
-          href="#booking"
-          class="btn primary">
-
+        <a href="#booking" class="btn primary">
           📅 BOOK YOUR SLOT
-
         </a>
 
-
-        <a
-          href="#memories"
-          class="btn secondary">
-
+        <a href="#memories" class="btn secondary">
           📸 VIEW OUR MEMORIES
-
         </a>
-
 
       </div>
-
 
     </div>
 
   </section>
 
 
-
-  <!-- =========================
-       SERVICES
-  ========================= -->
+  <!-- ================= SERVICES ================= -->
 
   <section id="services">
 
-
     <div class="section-title">
-
       OUR SERVICES
-
     </div>
 
-
     <h2>
-
-      Capturing Stories.
-      Creating Memories.
-
+      Capturing Stories. Creating Memories.
     </h2>
 
 
     <div class="services">
 
-
       <div class="service">
 
         <h3>
-
           💍 Wedding Photography
-
         </h3>
 
-
         <p>
-
-          Beautiful photographs
-          that preserve every
-          important moment.
-
+          Beautiful photographs that preserve
+          every important moment.
         </p>
 
       </div>
@@ -1036,18 +649,12 @@
       <div class="service">
 
         <h3>
-
           🎥 Cinematography
-
         </h3>
 
-
         <p>
-
-          Cinematic wedding films
-          and professional event
-          videos.
-
+          Cinematic wedding films and
+          professional event videos.
         </p>
 
       </div>
@@ -1056,18 +663,12 @@
       <div class="service">
 
         <h3>
-
           🌅 Pre-Wedding
-
         </h3>
 
-
         <p>
-
-          Creative pre-wedding
-          photography and cinematic
-          storytelling.
-
+          Creative pre-wedding photography
+          and cinematic storytelling.
         </p>
 
       </div>
@@ -1076,51 +677,35 @@
       <div class="service">
 
         <h3>
-
           🎉 Events
-
         </h3>
 
-
         <p>
-
-          Birthdays, engagements,
-          functions and special
-          events.
-
+          Birthdays, engagements, functions
+          and special events.
         </p>
 
       </div>
-
 
     </div>
 
   </section>
 
 
+  <!-- ================= OUR MEMORIES ================= -->
 
-  <!-- =========================
-       OUR MEMORIES
-  ========================= -->
-
-  <section
-    class="memories"
-    id="memories">
-
+  <section class="memories" id="memories">
 
     <div class="section-title">
-
       OUR MEMORIES
-
     </div>
 
-
     <h2>
-
       Moments We've Captured 📸
-
     </h2>
 
+
+    <!-- EXACTLY 4 PHOTOS -->
 
     <div class="memory-grid">
 
@@ -1129,7 +714,7 @@
 
         <img
           id="memory1"
-          src=""
+          src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=85"
           alt="HVX Memory 1">
 
       </div>
@@ -1139,7 +724,7 @@
 
         <img
           id="memory2"
-          src=""
+          src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1000&q=85"
           alt="HVX Memory 2">
 
       </div>
@@ -1149,7 +734,7 @@
 
         <img
           id="memory3"
-          src=""
+          src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1000&q=85"
           alt="HVX Memory 3">
 
       </div>
@@ -1159,7 +744,7 @@
 
         <img
           id="memory4"
-          src=""
+          src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?auto=format&fit=crop&w=1000&q=85"
           alt="HVX Memory 4">
 
       </div>
@@ -1175,50 +760,31 @@
 
     </p>
 
-
   </section>
 
 
+  <!-- ================= INSTAGRAM ================= -->
 
-  <!-- =========================
-       INSTAGRAM
-  ========================= -->
-
-  <section
-    class="instagram"
-    id="instagram">
-
+  <section id="instagram">
 
     <div class="section-title">
-
       LATEST FROM INSTAGRAM
-
     </div>
 
-
     <h2>
-
       Follow Our Work
-
     </h2>
 
 
     <div class="insta-box">
 
-
       <h3>
-
         📸 @HVX_shoots
-
       </h3>
 
-
       <p>
-
-        See our latest photography,
-        reels and cinematic stories
-        on Instagram.
-
+        See our latest photography, reels and
+        cinematic stories on Instagram.
       </p>
 
 
@@ -1232,49 +798,31 @@
 
       </a>
 
-
     </div>
-
 
   </section>
 
 
+  <!-- ================= BOOKING ================= -->
 
-  <!-- =========================
-       BOOKING
-  ========================= -->
-
-  <section
-    class="booking"
-    id="booking">
-
+  <section class="booking" id="booking">
 
     <div class="section-title">
-
       BOOK YOUR SLOT
-
     </div>
 
-
     <h2>
-
       Let's Capture Your Story
-
     </h2>
 
 
     <div class="booking-intro">
 
-
       <strong>
-
         Welcome to HVX Shoots 📸✨
-
       </strong>
 
-
-      <br>
-
+      <br><br>
 
       Please share:
 
@@ -1290,10 +838,9 @@
 
       🎬 Shoot Type
 
-      <br>
+      <br><br>
 
-      Let's create something
-      memorable together. 🤍
+      Let's create something memorable together. 🤍
 
     </div>
 
@@ -1303,8 +850,6 @@
       id="bookingForm">
 
 
-      <!-- NAME -->
-
       <input
         id="customerName"
         type="text"
@@ -1312,18 +857,14 @@
         required>
 
 
-      <!-- PHONE -->
-
       <input
         id="customerPhone"
         type="tel"
         placeholder="📱 Phone Number"
-        pattern="[0-9]{10}"
         maxlength="10"
+        pattern="[0-9]{10}"
         required>
 
-
-      <!-- LOCATION -->
 
       <input
         id="location"
@@ -1332,82 +873,52 @@
         required>
 
 
-      <!-- DATE -->
-
       <input
         id="preferredDate"
         type="date"
         required>
 
 
-      <!-- SHOOT TYPE -->
-
       <select
         id="shootType"
         required>
 
-
         <option value="">
-
           🎬 Select Shoot Type
-
         </option>
 
-
         <option>
-
           Wedding Photography
-
         </option>
 
-
         <option>
-
           Cinematography
-
         </option>
 
-
         <option>
-
           Pre-Wedding
-
         </option>
 
-
         <option>
-
           Events
-
         </option>
 
-
         <option>
-
           Portraits
-
         </option>
-
 
         <option>
-
           Reels
-
         </option>
-
 
       </select>
 
-
-      <!-- DETAILS -->
 
       <textarea
         id="eventDetails"
         placeholder="Additional details (optional)">
       </textarea>
 
-
-      <!-- SUBMIT -->
 
       <button
         type="submit"
@@ -1417,9 +928,7 @@
 
       </button>
 
-
     </form>
-
 
 
     <!-- THANK YOU -->
@@ -1428,24 +937,14 @@
       class="thank-you"
       id="thankYou">
 
-
       <h3>
-
         🎉 Thank You!
-
       </h3>
 
-
       <p>
-
-        Your booking request
-        has been prepared successfully.
-
+        Your booking request has been prepared successfully.
         <br>
-
-        We look forward to creating
-        something memorable with you. 🤍
-
+        We look forward to creating something memorable with you. 🤍
       </p>
 
 
@@ -1462,195 +961,122 @@
 
       <div class="whatsapp-note">
 
-        WhatsApp will open with your
-        booking details ready to send
-        to HVX SHOOTS.
+        WhatsApp will open with your booking
+        details ready to send to HVX SHOOTS.
 
       </div>
 
-
     </div>
-
 
   </section>
 
 
-
-  <!-- =========================
-       CONTACT
-  ========================= -->
+  <!-- ================= CONTACT ================= -->
 
   <section id="contact">
 
-
     <div class="section-title">
-
       CONTACT
-
     </div>
 
-
     <h2>
-
       HVX SHOOTS
-
     </h2>
 
-
     <p>
-
       Photography & Cinematography
-
     </p>
-
 
     <br>
 
-
     <p>
-
       📍 Vizag & Nearby Locations
-
     </p>
-
 
     <br>
 
-
     <p>
-
       📱
-
       <a
         class="contact-link"
         href="tel:+918897459725">
-
         +91 88974 59725
-
       </a>
-
     </p>
-
 
     <br>
 
-
     <p>
-
       ✉️
-
       <a
         class="contact-link"
         href="mailto:hvxshootsz@gmail.com">
-
         hvxshootsz@gmail.com
-
       </a>
-
     </p>
-
 
     <br>
 
-
     <p>
-
       📸
-
       <a
         class="contact-link"
         href="https://www.instagram.com/hvx_shoots/"
         target="_blank"
         rel="noopener">
-
         @HVX_shoots
-
       </a>
-
     </p>
-
 
   </section>
 
 
-
-  <!-- =========================
-       FOOTER
-  ========================= -->
+  <!-- ================= FOOTER ================= -->
 
   <footer>
 
-    © 2026 HVX SHOOTS
-    · Photography & Cinematography
+    © 2026 HVX SHOOTS · Photography & Cinematography
 
   </footer>
 
 
-
-  <!-- =========================
-       JAVASCRIPT
-  ========================= -->
+  <!-- ================= JAVASCRIPT ================= -->
 
   <script>
 
-
-    /* =================================
-       OUR MEMORIES PHOTOS
-    ================================= */
-
+    /* =====================================
+       OUR MEMORIES
+       4 PHOTOS CHANGE EVERY 3 SECONDS
+    ===================================== */
 
     const photoSets = [
 
-
       [
-
         "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=85",
-
         "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1000&q=85",
-
         "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1000&q=85",
-
         "https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?auto=format&fit=crop&w=1000&q=85"
-
       ],
 
-
       [
-
         "https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=1000&q=85",
-
         "https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1000&q=85",
-
         "https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=1000&q=85",
-
         "https://images.unsplash.com/photo-1504150558240-0b4fd8946624?auto=format&fit=crop&w=1000&q=85"
-
       ],
 
-
       [
-
         "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1000&q=85",
-
         "https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?auto=format&fit=crop&w=1000&q=85",
-
         "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=85",
-
         "https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1000&q=85"
-
       ],
 
-
       [
-
         "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1000&q=85",
-
         "https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=1000&q=85",
-
         "https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=1000&q=85",
-
         "https://images.unsplash.com/photo-1504150558240-0b4fd8946624?auto=format&fit=crop&w=1000&q=85"
-
       ]
 
     ];
@@ -1674,29 +1100,19 @@
 
     function changeMemoryPhotos() {
 
-
       memoryImages.forEach(
         (image, index) => {
 
-
           image.style.opacity = "0";
 
+          setTimeout(() => {
 
-          setTimeout(
-            () => {
+            image.src =
+              photoSets[currentPhotoSet][index];
 
+            image.style.opacity = "1";
 
-              image.src =
-                photoSets[currentPhotoSet][index];
-
-
-              image.style.opacity = "1";
-
-
-            },
-            300
-          );
-
+          }, 300);
 
         }
       );
@@ -1717,12 +1133,8 @@
     }
 
 
-    /* First display */
-
     changeMemoryPhotos();
 
-
-    /* Change every 3 seconds */
 
     setInterval(
       changeMemoryPhotos,
@@ -1730,127 +1142,76 @@
     );
 
 
-
-    /* =================================
+    /* =====================================
        WHATSAPP BOOKING
-    ================================= */
-
+    ===================================== */
 
     const bookingForm =
-      document.getElementById(
-        "bookingForm"
-      );
+      document.getElementById("bookingForm");
 
 
     const thankYou =
-      document.getElementById(
-        "thankYou"
-      );
+      document.getElementById("thankYou");
 
 
     const whatsappBooking =
-      document.getElementById(
-        "whatsappBooking"
-      );
+      document.getElementById("whatsappBooking");
 
 
     bookingForm.addEventListener(
       "submit",
       function(event) {
 
-
         event.preventDefault();
 
 
         const name =
-          document
-            .getElementById(
-              "customerName"
-            )
-            .value
-            .trim();
+          document.getElementById("customerName").value.trim();
 
 
         const phone =
-          document
-            .getElementById(
-              "customerPhone"
-            )
-            .value
-            .trim();
+          document.getElementById("customerPhone").value.trim();
 
 
         const location =
-          document
-            .getElementById(
-              "location"
-            )
-            .value
-            .trim();
+          document.getElementById("location").value.trim();
 
 
         const date =
-          document
-            .getElementById(
-              "preferredDate"
-            )
-            .value;
+          document.getElementById("preferredDate").value;
 
 
         const shootType =
-          document
-            .getElementById(
-              "shootType"
-            )
-            .value;
+          document.getElementById("shootType").value;
 
 
         const details =
-          document
-            .getElementById(
-              "eventDetails"
-            )
-            .value
-            .trim();
+          document.getElementById("eventDetails").value.trim();
 
 
-        /* CHECK PHONE */
-
-        if (
-          !/^[0-9]{10}$/.test(phone)
-        ) {
-
+        if (!/^[0-9]{10}$/.test(phone)) {
 
           alert(
             "Please enter a valid 10-digit phone number."
           );
-
 
           return;
 
         }
 
 
-        /* FORMAT DATE */
-
         const formattedDate =
-          date
+          new Date(
+            date + "T00:00:00"
+          ).toLocaleDateString(
+            "en-IN",
+            {
+              day: "2-digit",
+              month: "long",
+              year: "numeric"
+            }
+          );
 
-          ? new Date(
-              date + "T00:00:00"
-            ).toLocaleDateString(
-              "en-IN",
-              {
-                day: "2-digit",
-                month: "long",
-                year: "numeric"
-              }
-            )
-
-          : "";
-
-
-        /* WHATSAPP MESSAGE */
 
         const message =
 
@@ -1871,55 +1232,35 @@ ${details ? `📝 Details: ${details}` : ""}
 Please contact me regarding my booking.`;
 
 
-        /* HVX WHATSAPP NUMBER */
-
         const whatsappNumber =
           "918897459725";
 
 
-        /* CREATE WHATSAPP LINK */
-
         const whatsappURL =
-
           "https://wa.me/" +
-
           whatsappNumber +
-
           "?text=" +
+          encodeURIComponent(message);
 
-          encodeURIComponent(
-            message
-          );
-
-
-        /* ADD LINK */
 
         whatsappBooking.href =
           whatsappURL;
 
 
-        /* HIDE FORM */
-
         bookingForm.style.display =
           "none";
 
 
-        /* SHOW THANK YOU */
-
         thankYou.style.display =
           "block";
 
-
-        /* SCROLL */
 
         thankYou.scrollIntoView({
           behavior: "smooth",
           block: "center"
         });
 
-
       }
-
     );
 
   </script>
