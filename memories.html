@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HVX Shoots | Our Memories</title>
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #080808;
+      color: white;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(0, 0, 0, 0.92);
+      backdrop-filter: blur(10px);
+
+      padding: 18px 6%;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      border-bottom: 1px solid #222;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 5px;
+    }
+
+    .logo span {
+      display: block;
+      text-align: center;
+      font-size: 9px;
+      letter-spacing: 6px;
+    }
+
+    nav a {
+      color: #e3b55d;
+      text-decoration: none;
+
+      border: 1px solid #e3b55d;
+
+      padding: 10px 18px;
+
+      border-radius: 5px;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      text-align: center;
+
+      padding: 90px 5% 60px;
+
+      background:
+        linear-gradient(
+          #090909,
+          #111
+        );
+    }
+
+    .kicker {
+      color: #dcae55;
+
+      letter-spacing: 5px;
+
+      font-size: 12px;
+
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 7vw, 80px);
+
+      letter-spacing: 5px;
+    }
+
+    .hero p {
+      color: #aaa;
+
+      margin-top: 15px;
+
+      font-size: 17px;
+    }
+
+    /* ================= MEMORIES ================= */
+
+    section {
+      padding: 70px 5%;
+
+      max-width: 1500px;
+
+      margin: auto;
+    }
+
+    .title {
+      color: #dcae55;
+
+      letter-spacing: 5px;
+
+      font-size: 12px;
+
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 40px;
+
+      margin-bottom: 35px;
+    }
+
+    /* ================= PHOTO GRID ================= */
+
+    .photo-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(5, 1fr);
+
+      gap: 12px;
+    }
+
+    .photo-card {
+
+      position: relative;
+
+      height: 230px;
+
+      overflow: hidden;
+
+      border-radius: 6px;
+
+      background: #151515;
+
+      border: 1px solid #292929;
+
+      cursor: pointer;
+    }
+
+    .photo-card img {
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+      display: block;
+
+      transition:
+        opacity 0.6s ease,
+        transform 0.5s ease;
+    }
+
+    .photo-card:hover img {
+
+      transform: scale(1.06);
+    }
+
+    .number {
+
+      position: absolute;
+
+      bottom: 10px;
+
+      left: 10px;
+
+      background:
+        rgba(0, 0, 0, 0.65);
+
+      padding: 6px 9px;
+
+      border-radius: 4px;
+
+      font-size: 11px;
+
+      color: #eee;
+    }
+
+    /* ================= BOOKING ================= */
+
+    .cta {
+
+      max-width: none;
+
+      text-align: center;
+
+      padding: 75px 5%;
+
+      background:
+        linear-gradient(
+          135deg,
+          #111,
+          #191919
+        );
+    }
+
+    .btn {
+
+      display: inline-block;
+
+      margin-top: 20px;
+
+      padding: 15px 25px;
+
+      background: #e3b55d;
+
+      color: #111;
+
+      text-decoration: none;
+
+      font-weight: bold;
+
+      border-radius: 5px;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+
+      text-align: center;
+
+      padding: 30px;
+
+      color: #777;
+
+      background: #050505;
+    }
+
+    /* ================= TABLET ================= */
+
+    @media (max-width: 1000px) {
+
+      .photo-grid {
+
+        grid-template-columns:
+          repeat(3, 1fr);
+
+      }
+
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 600px) {
+
+      nav {
+
+        padding: 15px 5%;
+      }
+
+      .photo-grid {
+
+        grid-template-columns:
+          repeat(2, 1fr);
+
+        gap: 8px;
+
+      }
+
+      .photo-card {
+
+        height: 190px;
+
+      }
+
+      h2 {
+
+        font-size: 30px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- ================= NAVIGATION ================= -->
+
+  <nav>
+
+    <div class="logo">
+
+      HVX
+
+      <span>
+        SHOOTS
+      </span>
+
+    </div>
+
+
+    <a href="index.html">
+
+      ← Back Home
+
+    </a>
+
+  </nav>
+
+
+  <!-- ================= HERO ================= -->
+
+  <header class="hero">
+
+    <div class="kicker">
+
+      HVX SHOOTS
+
+    </div>
+
+
+    <h1>
+
+      OUR MEMORIES
+
+    </h1>
+
+
+    <p>
+
+      Every frame tells a story.
+      Every moment becomes a memory. 🤍
+
+    </p>
+
+  </header>
+
+
+  <!-- ================= PHOTO SECTION ================= -->
+
+  <section>
+
+    <div class="title">
+
+      PHOTOGRAPHY
+
+    </div>
+
+
+    <h2>
+
+      Our Memories 📸
+
+    </h2>
+
+
+    <div
+      class="photo-grid"
+      id="photoGrid">
+
+      <!--
+        JavaScript will create
+        20 photo cards here.
+      -->
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= BOOKING ================= -->
+
+  <section class="cta">
+
+    <div class="title">
+
+      READY TO CREATE?
+
+    </div>
+
+
+    <h2>
+
+      Let's Capture Your Story
+
+    </h2>
+
+
+    <a
+      class="btn"
+      href="index.html#booking">
+
+      BOOK YOUR SLOT →
+
+    </a>
+
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    © 2026 HVX SHOOTS
+    · Photography & Cinematography
+
+  </footer>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+
+
+    const photoGrid =
+      document.getElementById(
+        "photoGrid"
+      );
+
+
+    /*
+      DEMO PHOTO SETS
+
+      5 photos are displayed
+      in each row.
+
+      There are 4 rows.
+
+      Total = 20 photos.
+
+      Every 3 seconds the
+      photos change.
+    */
+
+
+    const photoSets = [
+
+      [
+
+        "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80",
+
+        "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=80",
+
+        "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=80",
+
+        "https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?auto=format&fit=crop&w=900&q=80",
+
+        "https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=900&q=80"
+
+      ],
+
+
+      [
+
+        "https://images.unsplash.com/photo-1504150558240-0b4fd8946624?auto=format&fit=crop&w=900&q=80",
+
+        "https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=900&q=80",
+
+        "https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=900&q=80",
+
+        "https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=900&q=80",
+
+        "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=80"
+
+      ],
+
+
+      [
+
+        "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=80",
+
+        "https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?auto=format&fit=crop&w=900&q=80",
+
+        "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80",
+
+        "https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=900&q=80",
+
+        "https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=900&q=80"
+
+      ],
+
+
+      [
+
+        "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=80",
+
+        "https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=900&q=80",
+
+        "https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=900&q=80",
+
+        "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=80",
+
+        "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80"
+
+      ]
+
+    ];
+
+
+    /* =================
+       CREATE 20 CARDS
+       ================= */
+
+    for (
+      let i = 0;
+      i < 20;
+      i++
+    ) {
+
+      const card =
+        document.createElement(
+          "div"
+        );
+
+
+      card.className =
+        "photo-card";
+
+
+      const img =
+        document.createElement(
+          "img"
+        );
+
+
+      img.alt =
+        "HVX Memory " +
+        (i + 1);
+
+
+      const label =
+        document.createElement(
+          "div"
+        );
+
+
+      label.className =
+        "number";
+
+
+      label.textContent =
+        "Memory " +
+        (i + 1);
+
+
+      card.appendChild(img);
+
+      card.appendChild(label);
+
+      photoGrid.appendChild(card);
+
+    }
+
+
+    /* GET ALL IMAGES */
+
+    const images =
+      [
+        ...document.querySelectorAll(
+          ".photo-card img"
+        )
+      ];
+
+
+    let currentSet = 0;
+
+
+    /* =================
+       CHANGE PHOTOS
+       ================= */
+
+    function changePhotos() {
+
+
+      images.forEach(
+        (image, index) => {
+
+
+          image.style.opacity =
+            "0";
+
+
+          setTimeout(
+            () => {
+
+
+              image.src =
+                photoSets[currentSet][
+                  index % 5
+                ];
+
+
+              image.style.opacity =
+                "1";
+
+
+            },
+            200
+          );
+
+
+        }
+      );
+
+
+      currentSet++;
+
+
+      if (
+        currentSet >=
+        photoSets.length
+      ) {
+
+        currentSet = 0;
+
+      }
+
+    }
+
+
+    /* FIRST LOAD */
+
+    changePhotos();
+
+
+    /* CHANGE EVERY 3 SECONDS */
+
+    setInterval(
+      changePhotos,
+      3000
+    );
+
+
+  </script>
+
+
+</body>
+
+</html>
