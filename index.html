@@ -88,8 +88,15 @@
       padding: 150px 7% 70px;
       display: flex;
       align-items: center;
+
       background:
-        linear-gradient(90deg, #050505 20%, rgba(0,0,0,0.65), rgba(0,0,0,0.15)),
+        linear-gradient(
+          90deg,
+          #050505 20%,
+          rgba(0,0,0,0.65),
+          rgba(0,0,0,0.15)
+        ),
+
         url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=85")
         center/cover;
     }
@@ -157,7 +164,7 @@
       color: white;
     }
 
-    /* SERVICES */
+    /* SECTIONS */
 
     section {
       padding: 80px 7%;
@@ -174,6 +181,8 @@
       font-size: 42px;
       margin-bottom: 35px;
     }
+
+    /* SERVICES */
 
     .services {
       display: grid;
@@ -226,6 +235,15 @@
       background: linear-gradient(135deg, #111, #181818);
     }
 
+    .booking-intro {
+      max-width: 700px;
+      margin: -15px auto 30px;
+      text-align: center;
+      color: #ddd;
+      line-height: 1.8;
+      font-size: 18px;
+    }
+
     .booking-form {
       max-width: 650px;
       margin: auto;
@@ -242,6 +260,7 @@
       border: 1px solid #333;
       color: white;
       border-radius: 5px;
+      font: inherit;
     }
 
     .booking-form textarea {
@@ -249,10 +268,59 @@
       resize: none;
     }
 
+    .booking-form input:focus,
+    .booking-form select:focus,
+    .booking-form textarea:focus {
+      outline: none;
+      border-color: #dcae55;
+    }
+
     .submit {
       border: none;
       cursor: pointer;
       font-size: 16px;
+    }
+
+    /* THANK YOU */
+
+    .thank-you {
+      display: none;
+      max-width: 650px;
+      margin: auto;
+      padding: 35px;
+      text-align: center;
+      background: #101010;
+      border: 1px solid #dcae55;
+      border-radius: 10px;
+    }
+
+    .thank-you h3 {
+      color: #e3b55d;
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .thank-you p {
+      color: #ddd;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .whatsapp-note {
+      color: #aaa;
+      font-size: 14px;
+      margin-top: 15px;
+    }
+
+    /* CONTACT */
+
+    #contact p {
+      color: #ccc;
+    }
+
+    .contact-link {
+      color: #e3b55d;
+      text-decoration: none;
     }
 
     /* FOOTER */
@@ -301,6 +369,10 @@
 
       section h2 {
         font-size: 32px;
+      }
+
+      .booking-intro {
+        font-size: 16px;
       }
     }
   </style>
@@ -445,6 +517,7 @@
       <a
         href="https://www.instagram.com/hvx_shoots/"
         target="_blank"
+        rel="noopener"
         class="btn primary">
         FOLLOW ON INSTAGRAM
       </a>
@@ -466,22 +539,66 @@
       Let's Capture Your Story
     </h2>
 
-    <form class="booking-form">
+    <div class="booking-intro">
+
+      <strong>
+        Welcome to HVX Shoots 📸✨
+      </strong>
+
+      <br>
+
+      Please share your details and let's create something memorable together. 🤍
+
+    </div>
+
+
+    <form class="booking-form" id="bookingForm">
+
+      <!-- NAME -->
 
       <input
+        id="customerName"
         type="text"
-        placeholder="Your Name"
+        placeholder="👤 Your Name"
         required>
+
+
+      <!-- PHONE -->
 
       <input
+        id="customerPhone"
         type="tel"
-        placeholder="Phone Number"
+        placeholder="📱 Phone Number"
+        pattern="[0-9]{10}"
+        maxlength="10"
         required>
 
-      <select required>
+
+      <!-- LOCATION -->
+
+      <input
+        id="location"
+        type="text"
+        placeholder="📍 Location"
+        required>
+
+
+      <!-- DATE -->
+
+      <input
+        id="preferredDate"
+        type="date"
+        required>
+
+
+      <!-- SHOOT TYPE -->
+
+      <select
+        id="shootType"
+        required>
 
         <option value="">
-          Select Service
+          🎬 Select Shoot Type
         </option>
 
         <option>
@@ -504,27 +621,68 @@
           Portraits
         </option>
 
+        <option>
+          Reels
+        </option>
+
       </select>
 
-      <input
-        type="date"
-        required>
 
-      <input
-        type="time"
-        required>
+      <!-- EXTRA DETAILS -->
 
       <textarea
-        placeholder="Event / Location Details">
+        id="eventDetails"
+        placeholder="Additional details (optional)">
       </textarea>
+
+
+      <!-- BUTTON -->
 
       <button
         type="submit"
         class="btn primary submit">
-        SUBMIT BOOKING →
+
+        BOOK MY SLOT →
+
       </button>
 
     </form>
+
+
+    <!-- THANK YOU MESSAGE -->
+
+    <div
+      class="thank-you"
+      id="thankYou">
+
+      <h3>
+        🎉 Thank You!
+      </h3>
+
+      <p>
+        Your booking request has been prepared successfully.
+        We look forward to creating something memorable with you. 🤍
+      </p>
+
+
+      <a
+        id="whatsappBooking"
+        class="btn primary"
+        target="_blank"
+        rel="noopener">
+
+        💬 CONTINUE TO WHATSAPP
+
+      </a>
+
+
+      <div class="whatsapp-note">
+
+        WhatsApp will open with your booking details ready to send to HVX SHOOTS.
+
+      </div>
+
+    </div>
 
   </section>
 
@@ -554,7 +712,51 @@
     <br>
 
     <p>
-      📱 Contact us for bookings
+
+      📱
+
+      <a
+        class="contact-link"
+        href="tel:+918897459725">
+
+        +91 88974 59725
+
+      </a>
+
+    </p>
+
+    <br>
+
+    <p>
+
+      ✉️
+
+      <a
+        class="contact-link"
+        href="mailto:hvxshootsz@gmail.com">
+
+        hvxshootsz@gmail.com
+
+      </a>
+
+    </p>
+
+    <br>
+
+    <p>
+
+      📸
+
+      <a
+        class="contact-link"
+        href="https://www.instagram.com/hvx_shoots/"
+        target="_blank"
+        rel="noopener">
+
+        @HVX_shoots
+
+      </a>
+
     </p>
 
   </section>
@@ -568,6 +770,166 @@
 
   </footer>
 
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    const bookingForm =
+      document.getElementById("bookingForm");
+
+    const thankYou =
+      document.getElementById("thankYou");
+
+    const whatsappBooking =
+      document.getElementById("whatsappBooking");
+
+
+    bookingForm.addEventListener(
+      "submit",
+      function(event) {
+
+        event.preventDefault();
+
+
+        const name =
+          document
+            .getElementById("customerName")
+            .value
+            .trim();
+
+
+        const phone =
+          document
+            .getElementById("customerPhone")
+            .value
+            .trim();
+
+
+        const location =
+          document
+            .getElementById("location")
+            .value
+            .trim();
+
+
+        const date =
+          document
+            .getElementById("preferredDate")
+            .value;
+
+
+        const shootType =
+          document
+            .getElementById("shootType")
+            .value;
+
+
+        const details =
+          document
+            .getElementById("eventDetails")
+            .value
+            .trim();
+
+
+        /* CHECK PHONE */
+
+        if (!/^[0-9]{10}$/.test(phone)) {
+
+          alert(
+            "Please enter a valid 10-digit phone number."
+          );
+
+          return;
+
+        }
+
+
+        /* FORMAT DATE */
+
+        const formattedDate =
+          date
+
+          ? new Date(
+              date + "T00:00:00"
+            ).toLocaleDateString(
+              "en-IN",
+              {
+                day: "2-digit",
+                month: "long",
+                year: "numeric"
+              }
+            )
+
+          : "";
+
+
+        /* WHATSAPP MESSAGE */
+
+        const message =
+
+`📸 HVX SHOOTS - NEW BOOKING
+
+👤 Name: ${name}
+
+📱 Phone: ${phone}
+
+📍 Location: ${location}
+
+📅 Preferred Date: ${formattedDate}
+
+🎬 Shoot Type: ${shootType}
+
+${details ? `📝 Details: ${details}` : ""}
+
+Please contact me regarding my booking.`;
+
+
+        /* HVX WHATSAPP NUMBER */
+
+        const whatsappNumber =
+          "918897459725";
+
+
+        /* WHATSAPP LINK */
+
+        const whatsappURL =
+          "https://wa.me/" +
+          whatsappNumber +
+          "?text=" +
+          encodeURIComponent(message);
+
+
+        /* SET WHATSAPP LINK */
+
+        whatsappBooking.href =
+          whatsappURL;
+
+
+        /* HIDE FORM */
+
+        bookingForm.style.display =
+          "none";
+
+
+        /* SHOW THANK YOU */
+
+        thankYou.style.display =
+          "block";
+
+
+        /* SCROLL TO MESSAGE */
+
+        thankYou.scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+
+      }
+
+    );
+
+  </script>
 
 </body>
 </html>
